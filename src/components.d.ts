@@ -9,10 +9,18 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./components/AppFooter.vue')['default']
     AppHeader: typeof import('./components/AppHeader.vue')['default']
+    AudioCard: typeof import('./components/AudioCard.vue')['default']
+    AudioDialog: typeof import('./components/AudioDialog.vue')['default']
+    AudioList: typeof import('./components/AudioList.vue')['default']
+    Audios: typeof import('./components/AudioList.vue')['default']
+    AudiosList: typeof import('./components/AudioList.vue')['default']
     Banner: typeof import('./components/Banner.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TodayAudio: typeof import('./components/TodayAudio.vue')['default']
     TodayDarshan: typeof import('./components/TodayDarshan.vue')['default']
+    VideoDialog: typeof import('./components/VideoDialog.vue')['default']
+    VideoList: typeof import('./components/VideoList.vue')['default']
+    Videos: typeof import('./components/VideoList.vue')['default']
   }
 }
