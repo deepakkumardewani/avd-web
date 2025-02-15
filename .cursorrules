@@ -1,0 +1,111 @@
+# Cursor rules configuration file
+
+# Ignore patterns (similar to .gitignore)
+ignore:
+  - 'node_modules/'
+  - 'dist/'
+  - '.git/'
+  - '*.log'
+  - '*.lock'
+  - 'build/'
+  - 'coverage/'
+  - 'tmp/'
+  - '.env'
+  - '.env.*'
+
+# File type associations
+associations:
+  - ext: '.vue'
+    type: 'vue'
+  - ext: '.js'
+    type: 'javascript'
+  - ext: '.ts'
+    type: 'typescript'
+  - ext: '.css'
+    type: 'css'
+  - ext: '.scss'
+    type: 'scss'
+
+# Maximum file size (in KB) that Cursor will process
+maxFileSize: 1000
+
+# Enable or disable specific features
+features:
+  autoComplete: true
+  formatOnSave: true
+  linting: true
+  semanticHighlighting: true
+
+# Custom language server settings
+languageServer:
+  vue:
+    enabled: true
+    formatting: true
+  javascript:
+    enabled: true
+    formatting: true
+  typescript:
+    enabled: true
+    formatting: true
+
+# Editor behavior
+editor:
+  tabSize: 2
+  insertSpaces: true
+  trimTrailingWhitespace: true
+  insertFinalNewline: true
+
+# Search settings
+search:
+  excludePatterns:
+    - '**/*.min.js'
+    - '**/*.min.css'
+    - '**/dist/**'
+  maxResults: 1000
+
+# Vue 3 Project Configuration
+vue3:
+  # Best practices
+  bestPractices:
+    - 'Use setup() function for component logic'
+    - 'Utilize ref and reactive for reactive state'
+    - 'Implement computed properties with computed()'
+    - 'Use watch and watchEffect for side effects'
+    - 'Implement lifecycle hooks with onMounted, onUpdated, etc.'
+    - 'Utilize provide/inject for dependency injection'
+
+  # Project structure
+  folderStructure:
+    root: 'src/'
+    directories:
+      - 'components/'
+      - 'composables/'
+      - 'layouts/'
+      - 'pages/'
+      - 'utils/'
+      - 'plugins/'
+      - 'styles/'
+      - 'router/'
+      - 'stores/'
+      - 'assets/'
+    files:
+      - 'App.vue'
+      - 'main.js'
+
+  # Development guidelines
+  guidelines:
+    typescript: 'Use TypeScript for type safety'
+    props: 'Implement proper props and emits definitions'
+    components: "Utilize Vue 3's Teleport component when needed"
+    errorHandling: 'Implement proper error handling'
+    styleGuide: 'Follow Vue 3 style guide and naming conventions'
+    buildTool: 'Use Vite for fast development and building'
+    styling: 'Always use Tailwind CSS classes and also use the tw- prefix for tailwind classes'
+    stateManagement: 'Use Pinia for state management'
+    routing: 'Use Vue Router for navigation'
+    api:
+      - 'Always use the custom useFetch composable for API calls'
+      - 'Always create a new method in the helpers.ts file for each new API call'
+    ui:
+      - 'Always use Vuetify for UI components'
+      - 'Always use fontawesome icons and not material icons'
